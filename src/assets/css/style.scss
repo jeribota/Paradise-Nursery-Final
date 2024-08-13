@@ -1,0 +1,36 @@
+// assets/css/style.scss
+
+// Variables
+$primary-color: #3498db;
+$font-stack: Helvetica, sans-serif;
+
+// Base styles
+body {
+  font-family: $font-stack;
+  color: $primary-color;
+}
+
+// Nested styling example
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+
+// Mixin example
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+button {
+  @include border-radius(5px);
+}
